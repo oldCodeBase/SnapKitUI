@@ -1,1 +1,1 @@
-# Work with the SnapKit fraemowork.
+# Work with the SnapKit framework.
