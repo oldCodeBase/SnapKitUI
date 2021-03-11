@@ -13,12 +13,12 @@ class AuthViewController: UIViewController {
     private let silentLabel       = CustomLabel(text: "Silent")
     private let moonLabel         = CustomLabel(text: "Moon")
     private let quizLabel         = CustomLabel(text: "We are what we do", fontSize: 30)
-    
     private let descriptionLabel  = CustomLabel(colour: #colorLiteral(red: 0.631372549, green: 0.6431372549, blue: 0.6980392157, alpha: 1), font: Font.helveticaRegular)
     private let isRegisteredLabel = CustomLabel(colour: #colorLiteral(red: 0.631372549, green: 0.6431372549, blue: 0.6980392157, alpha: 1), font: Font.helveticaMedium, fontSize: 14)
     
     private let logoImageView     = CustomImageView(imageName: "logo")
     private let pictureImageView  = CustomImageView(imageName: "image")
+    
     private let signUpButton      = CustomButton(title: "SIGN UP", bgColor: #colorLiteral(red: 0.5568627451, green: 0.5921568627, blue: 0.9921568627, alpha: 1))
     private let logInButton       = CustomButton(title: "LOG IN", titleColour: #colorLiteral(red: 0.5568627451, green: 0.5921568627, blue: 0.9921568627, alpha: 1))
     
@@ -27,12 +27,14 @@ class AuthViewController: UIViewController {
         view.backgroundColor = .systemBackground
         updateUI()
     }
+}
+
+extension AuthViewController {
     
     func updateUI() {
         view.addSubviews(silentLabel, logoImageView, moonLabel, pictureImageView,
                          quizLabel, descriptionLabel, signUpButton, isRegisteredLabel, logInButton)
         
-        descriptionLabel.numberOfLines  = 2
         signUpButton.layer.cornerRadius = 31
         
         isRegisteredLabel.text = "ALREADY HAVE AN ACCOUNT?"
@@ -85,25 +87,6 @@ class AuthViewController: UIViewController {
         logInButton.snp.makeConstraints { make in
             make.leading.equalTo(isRegisteredLabel.snp.trailing).offset(8)
             make.bottom.equalToSuperview().inset(40)
-        }
-    }
-}
-
-import SwiftUI
-
-struct ViewControllerProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView()
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        let viewController = AuthViewController()
-        func makeUIViewController(context: UIViewControllerRepresentableContext<ViewControllerProvider.ContainerView>) -> AuthViewController {
-            return viewController
-        }
-        
-        func updateUIViewController(_ uiViewController: ViewControllerProvider.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<ViewControllerProvider.ContainerView>) {
-            
         }
     }
 }

@@ -30,5 +30,6 @@ class CustomLabel: UILabel {
         minimumScaleFactor                          = 0.9
         textAlignment                               = .center
         lineBreakMode                               = .byTruncatingTail
+        numberOfLines                               = 2
     }
 }
