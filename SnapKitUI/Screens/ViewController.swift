@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     private let descriptionLabel    = CustomLabel(colour: #colorLiteral(red: 0.631372549, green: 0.6431372549, blue: 0.6980392157, alpha: 1), font: "HelveticaNeue-Regular", fontSize: 16)
     private let isRegisteredLabel   = CustomLabel(colour: #colorLiteral(red: 0.631372549, green: 0.6431372549, blue: 0.6980392157, alpha: 1), font: "HelveticaNeue-Medium", fontSize: 14)
     
+    private let logoImageView       = CustomImageView(imageName: "logo")
+    private let pictureImageView    = CustomImageView(imageName: "image")
+    
     private let signUpButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("SIGN UP", for: .normal)
@@ -32,22 +35,6 @@ class ViewController: UIViewController {
         button.setTitleColor(#colorLiteral(red: 0.5568627451, green: 0.5921568627, blue: 0.9921568627, alpha: 1), for: .normal)
         button.titleLabel?.font = UIFont(name: "HelveticaNeue-Medium", size: 14)
         return button
-    }()
-    
-    private let logoImageView: UIImageView = {
-        let imageView           = UIImageView()
-        imageView.image         = UIImage(named: "logo")
-        imageView.contentMode   = .scaleAspectFit
-        imageView.clipsToBounds = true
-        return imageView
-    }()
-    
-    private let pictureImageView: UIImageView = {
-        let imageView           = UIImageView()
-        imageView.image         = UIImage(named: "image")
-        imageView.contentMode   = .scaleAspectFit
-        imageView.clipsToBounds = true
-        return imageView
     }()
     
     override func viewDidLoad() {
