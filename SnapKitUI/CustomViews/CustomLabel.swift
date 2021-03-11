@@ -14,8 +14,9 @@ class CustomLabel: UILabel {
         configure()
     }
     
-    convenience init(colour: UIColor, font: String, fontSize: CGFloat) {
+    convenience init(text: String = "", colour: UIColor = .label, font: String = Font.helveticaBold, fontSize: CGFloat = 16) {
         self.init(frame: .zero)
+        self.text           = text
         self.textColor      = colour
         self.font           = UIFont(name: font, size: fontSize)
     }
@@ -27,7 +28,7 @@ class CustomLabel: UILabel {
     private func configure() {
         adjustsFontSizeToFitWidth                   = true
         minimumScaleFactor                          = 0.9
+        textAlignment                               = .center
         lineBreakMode                               = .byTruncatingTail
-        translatesAutoresizingMaskIntoConstraints   = false
     }
 }
