@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		123FB91B25FB885500303FFA /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FB91A25FB885500303FFA /* CreateAccountViewController.swift */; };
+		123FB91E25FB989E00303FFA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FB91D25FB989E00303FFA /* HeaderView.swift */; };
 		127FDFFF25FAA19B00878746 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FDFFE25FAA19B00878746 /* CustomButton.swift */; };
 		127FE00325FAAB6E00878746 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FE00225FAAB6E00878746 /* Constants.swift */; };
 		12B88DD025FA61BB0096067F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B88DCF25FA61BB0096067F /* AppDelegate.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		123FB91A25FB885500303FFA /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		123FB91D25FB989E00303FFA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		127FDFFE25FAA19B00878746 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		127FE00225FAAB6E00878746 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		12B88DCC25FA61BB0096067F /* SnapKitUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +99,7 @@
 				12B88DF725FA9E730096067F /* CustomImageView.swift */,
 				127FDFFE25FAA19B00878746 /* CustomButton.swift */,
 				12ECC6E825FAC9BD00CC8703 /* CustomTextField.swift */,
+				123FB91D25FB989E00303FFA /* HeaderView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			children = (
 				12B88DD325FA61BB0096067F /* AuthViewController.swift */,
 				12ECC6E525FAC58B00CC8703 /* SignInViewController.swift */,
+				123FB91A25FB885500303FFA /* CreateAccountViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -203,8 +209,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				12B88DD425FA61BB0096067F /* AuthViewController.swift in Sources */,
+				123FB91E25FB989E00303FFA /* HeaderView.swift in Sources */,
 				12B88DF825FA9E730096067F /* CustomImageView.swift in Sources */,
 				12B88DD025FA61BB0096067F /* AppDelegate.swift in Sources */,
+				123FB91B25FB885500303FFA /* CreateAccountViewController.swift in Sources */,
 				12B88DEF25FA7E700096067F /* UIView+Ext.swift in Sources */,
 				12ECC6E925FAC9BD00CC8703 /* CustomTextField.swift in Sources */,
 				127FDFFF25FAA19B00878746 /* CustomButton.swift in Sources */,

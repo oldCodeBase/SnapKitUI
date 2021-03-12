@@ -14,11 +14,12 @@ class CustomButton: UIButton {
         configure()
     }
     
-    convenience init(title: String, titleColour: UIColor = #colorLiteral(red: 0.9647058824, green: 0.9450980392, blue: 0.9843137255, alpha: 1), bgColor: UIColor = .clear) {
+    convenience init(title: String, titleColour: UIColor = #colorLiteral(red: 0.9647058824, green: 0.9450980392, blue: 0.9843137255, alpha: 1), bgColor: UIColor = .clear, cornerRadius: CGFloat = 30) {
         self.init(type: .system)
         self.setTitle(title, for: .normal)
         self.setTitleColor(titleColour, for: .normal)
         self.backgroundColor = bgColor
+        self.layer.cornerRadius = cornerRadius
     }
     
     required init?(coder: NSCoder) {
@@ -27,7 +28,6 @@ class CustomButton: UIButton {
     
     private func configure() {
         clipsToBounds      = true
-        layer.cornerRadius = 30
         titleLabel?.font   = UIFont(name: Font.mediumHelvetica, size: 14)
     }
 }
