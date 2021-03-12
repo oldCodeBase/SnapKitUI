@@ -14,7 +14,7 @@ class CustomLabel: UILabel {
         configure()
     }
     
-    convenience init(text: String = "", colour: UIColor = .label, font: String = Font.helveticaBold, fontSize: CGFloat = 16) {
+    convenience init(text: String = "", colour: UIColor = .label, font: String = Font.boldHelvetica, fontSize: CGFloat = 16) {
         self.init(frame: .zero)
         self.text           = text
         self.textColor      = colour

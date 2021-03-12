@@ -13,8 +13,8 @@ class AuthViewController: UIViewController {
     private let silentLabel       = CustomLabel(text: "Silent")
     private let moonLabel         = CustomLabel(text: "Moon")
     private let quizLabel         = CustomLabel(text: "We are what we do", fontSize: 30)
-    private let descriptionLabel  = CustomLabel(colour: #colorLiteral(red: 0.631372549, green: 0.6431372549, blue: 0.6980392157, alpha: 1), font: Font.helveticaRegular)
-    private let isRegisteredLabel = CustomLabel(colour: #colorLiteral(red: 0.631372549, green: 0.6431372549, blue: 0.6980392157, alpha: 1), font: Font.helveticaMedium, fontSize: 14)
+    private let descriptionLabel  = CustomLabel(colour: #colorLiteral(red: 0.631372549, green: 0.6431372549, blue: 0.6980392157, alpha: 1), font: Font.regularHelvetica)
+    private let isRegisteredLabel = CustomLabel(colour: #colorLiteral(red: 0.631372549, green: 0.6431372549, blue: 0.6980392157, alpha: 1), font: Font.mediumHelvetica, fontSize: 14)
     
     private let logoImageView     = CustomImageView(imageName: "logo")
     private let pictureImageView  = CustomImageView(imageName: "image")
@@ -35,7 +35,7 @@ extension AuthViewController {
         view.addSubviews(silentLabel, logoImageView, moonLabel, pictureImageView,
                          quizLabel, descriptionLabel, signUpButton, isRegisteredLabel, logInButton)
         
-        signUpButton.layer.cornerRadius = 31
+        signUpButton.layer.cornerRadius = 30
         
         isRegisteredLabel.text = "ALREADY HAVE AN ACCOUNT?"
         descriptionLabel.text  = "Thousand of people are using silent moon for small meditation"
@@ -76,7 +76,7 @@ extension AuthViewController {
             make.leading.equalToSuperview().offset(50)
             make.trailing.equalToSuperview().offset(-50)
             make.bottom.equalTo(logInButton.snp.top).inset(-20)
-            make.height.equalTo(63)
+            make.height.equalTo(60)
         }
         
         isRegisteredLabel.snp.makeConstraints { make in

@@ -26,6 +26,8 @@ class CustomButton: UIButton {
     }
     
     private func configure() {
-        titleLabel?.font   = UIFont(name: "HelveticaNeue-Medium", size: 14)
+        clipsToBounds      = true
+        layer.cornerRadius = 30
+        titleLabel?.font   = UIFont(name: Font.mediumHelvetica, size: 14)
     }
 }
