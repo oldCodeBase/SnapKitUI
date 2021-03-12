@@ -10,6 +10,7 @@ import SnapKit
 
 class SignInViewController: UIViewController {
     
+    private let backButton            = UIButton(type: .system)
     private let headerView            = HeaderView(title: "Welcome Back!")
     private let logInButton           = CustomButton(title: "LOG IN", bgColor: #colorLiteral(red: 0.5568627451, green: 0.5921568627, blue: 0.9921568627, alpha: 1))
     private let forgotPasswordButton  = CustomButton(title: "Forgot Password?", titleColour: .label, cornerRadius: 0)
@@ -21,17 +22,31 @@ class SignInViewController: UIViewController {
         view.backgroundColor = .systemBackground
         updateUI()
     }
+    
+    @objc private func backButtonTapped() {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension SignInViewController {
     
     private func updateUI() {
-        view.addSubviews(headerView, logInButton, forgotPasswordButton, emailTextField, passwordTextField)
+        view.addSubviews(backButton, headerView, logInButton, forgotPasswordButton, emailTextField, passwordTextField)
         
         passwordTextField.isSecureTextEntry = true
         
-        headerView.snp.makeConstraints { make in
+        backButton.setImage(Images.back, for: .normal)
+        backButton.tintColor = #colorLiteral(red: 0.2470588235, green: 0.2549019608, blue: 0.3058823529, alpha: 1)
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        
+        backButton.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(20)
             make.top.equalTo(view.safeAreaLayoutGuide).offset(40)
+            make.width.height.equalTo(55)
+        }
+        
+        headerView.snp.makeConstraints { make in
+            make.top.equalTo(backButton.snp.bottom).offset(40)
             make.leading.equalToSuperview().offset(30)
             make.trailing.equalToSuperview().offset(-30)
             make.height.equalTo(255)

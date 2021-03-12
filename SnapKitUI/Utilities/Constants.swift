@@ -19,6 +19,7 @@ enum Images {
     static let facebook     = UIImage(named: "facebook")
     static let checked      = UIImage(systemName: "checkmark.square.fill")
     static let unchecked    = UIImage(systemName: "square")
+    static let back         = UIImage(named: "back")
 }
 
 

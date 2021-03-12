@@ -10,6 +10,7 @@ import SnapKit
 
 class CreateAccountViewController: UIViewController {
     
+    private let backButton          = UIButton(type: .system)
     private let headerView          = HeaderView(title: "Create your account")
     private let getStartedButton    = CustomButton(title: "GET STARTED", bgColor: #colorLiteral(red: 0.5568627451, green: 0.5921568627, blue: 0.9921568627, alpha: 1))
     private let privacyPolicyButton = CustomButton(title: "I have read the Privacy Policy", titleColour: #colorLiteral(red: 0.5568627451, green: 0.5921568627, blue: 0.9921568627, alpha: 1), cornerRadius: 0)
@@ -33,19 +34,33 @@ class CreateAccountViewController: UIViewController {
     @objc private func checkboxButtonTapped() {
         self.checkboxButton.isSelected.toggle()
     }
+    
+    @objc private func backButtonTapped() {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension CreateAccountViewController {
     
     private func updateUI() {
-        view.addSubviews(headerView, getStartedButton, privacyPolicyButton, nameTextField,
-                         emailTextField, passwordTextField, checkboxButton)
+        view.addSubviews(backButton, headerView, getStartedButton, privacyPolicyButton,
+                         nameTextField, emailTextField, passwordTextField, checkboxButton)
         
         passwordTextField.isSecureTextEntry = true
         checkboxButton.addTarget(self, action: #selector(checkboxButtonTapped), for: .touchUpInside)
         
-        headerView.snp.makeConstraints { make in
+        backButton.setImage(Images.back, for: .normal)
+        backButton.tintColor = #colorLiteral(red: 0.2470588235, green: 0.2549019608, blue: 0.3058823529, alpha: 1)
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        
+        backButton.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(20)
             make.top.equalTo(view.safeAreaLayoutGuide).offset(40)
+            make.width.height.equalTo(55)
+        }
+        
+        headerView.snp.makeConstraints { make in
+            make.top.equalTo(backButton.snp.bottom).offset(40)
             make.leading.equalToSuperview().offset(30)
             make.trailing.equalToSuperview().offset(-30)
             make.height.equalTo(255)
