@@ -8,7 +8,16 @@
 import UIKit
 
 enum Font {
-    static let helveticaBold    = "HelveticaNeue-Bold"
-    static let helveticaRegular = "HelveticaNeue-Regular"
-    static let helveticaMedium  = "HelveticaNeue-Medium"
+    static let boldHelvetica    = "HelveticaNeue-Bold"
+    static let regularHelvetica = "HelveticaNeue-Regular"
+    static let mediumHelvetica  = "HelveticaNeue-Medium"
+    static let lightHelvetica   = "HelveticaNeue-Light"
 }
+
+enum Images {
+    static let google       = UIImage(named: "google")
+    static let facebook     = UIImage(named: "facebook")
+}
+
+
+
