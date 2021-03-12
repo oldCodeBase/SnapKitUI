@@ -17,6 +17,8 @@ enum Font {
 enum Images {
     static let google       = UIImage(named: "google")
     static let facebook     = UIImage(named: "facebook")
+    static let checked      = UIImage(systemName: "checkmark.square.fill")
+    static let unchecked    = UIImage(systemName: "square")
 }
 
 
