@@ -85,7 +85,7 @@
 				127FE00125FAAB5B00878746 /* Utilities */,
 				12B88DF525FA9CA90096067F /* Extensions */,
 				12B88DF425FA9C9C0096067F /* Screens */,
-				12B88DF325FA9C7C0096067F /* Suporrting Files */,
+				12B88DF325FA9C7C0096067F /* Supporting */,
 				12B88DF225FA9C6E0096067F /* CustomViews */,
 				12B88DDD25FA61C00096067F /* Info.plist */,
 			);
@@ -104,7 +104,7 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
-		12B88DF325FA9C7C0096067F /* Suporrting Files */ = {
+		12B88DF325FA9C7C0096067F /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
 				12B88DCF25FA61BB0096067F /* AppDelegate.swift */,
@@ -112,7 +112,7 @@
 				12B88DD825FA61C00096067F /* Assets.xcassets */,
 				12B88DDA25FA61C00096067F /* LaunchScreen.storyboard */,
 			);
-			path = "Suporrting Files";
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 		12B88DF425FA9C9C0096067F /* Screens */ = {
